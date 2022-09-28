@@ -1,32 +1,17 @@
 //Get all contacts
-GET http://localhost:3000/contacts
+GET https://zero4-personal-assignment.onrender.com/api-docs/#/default/get_contacts_
 
 //Get contact by id
-//-----------Needs work----------------------
+GET https://zero4-personal-assignment.onrender.com/api-docs/#/default/get_contacts__id_
+
 
 //Create new contact
-POST http://localhost:300/contacts HTTP/1.1
-content-type: application/json
-{
-    "firstName":"Darth",
-    "lastName":"Vader",
-    "email":"vaderd@empire.com",
-    "favoriteColor":"black",
-    "birthday":"5/25/1977"
-}
-
+POST https://zero4-personal-assignment.onrender.com/api-docs/#/default/post_contacts_
 
 
 //Update contact
-PUT http://localhost:3000/contacts/633321f6c90d80dc20cab27e
-content-type: application/json
-{
-    "firstName":"Luke",
-    "lastName":"Skywalker",
-    "email":"skyluke@rebels.com",
-    "favoriteColor":"blue",
-    "birthday":"5/25/1977"
-}
+PUT https://zero4-personal-assignment.onrender.com/api-docs/#/default/put_contacts__id_
+
 
 //Delete contact
-DELETE http://localhost:3000/contacts/633321f6c90d80dc20cab27e HTTP/1.1
+DELETE https://zero4-personal-assignment.onrender.com/api-docs/#/default/delete_contacts__id_
