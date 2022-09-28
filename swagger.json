@@ -1,0 +1,160 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Project Main API.docs",
+    "description": "This is my first swagger API documentation",
+    "version": "1.0.0"
+  },
+  "host": "localhost:3000",
+  "basePath": "/",
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/contacts/" : {
+    "get" : {
+      "description" : "This route gets all the contacts.", 
+      "produces" : ["application/json"],
+      "parameters" :[],
+      "responses" : {
+        "200": {
+          "description" : "Ok"
+        }
+      }
+    },
+
+
+    "post" : {
+      "description" : "This route adds a new contact.", 
+      "produces" : ["application/json"],
+      "parameters" :[
+        {
+          "name" : "body",
+          "in" : "body",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "firstName":{
+                "example": "John"
+              },
+              "lastName": {
+                "example" : "Smith"
+              },
+              "email": {
+                "example" : "jsmith@gmail.com"
+              },
+              "favoriteColor": {
+                "example" : "blue"
+              },
+              "birthday": {
+                "example" : "01-01-00"
+              }
+            }
+          }
+        }
+      ],
+      "responses" : {
+        "201": {
+          "description" : "Created"
+        },
+        "500":{
+          "description" : "Internal server error"
+        }
+        
+      }
+    }
+    
+
+    },
+    "/contacts/{id}" : {
+      "get" : {
+        "description" : "This route gets one contact by id.", 
+        "produces" : ["application/json"],
+        "parameters" :[{
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "string"
+        }],
+        "responses" : {
+          "200": {
+            "description" : "Ok"
+          }
+        }
+      },
+
+
+      
+      "put" : {
+        "description" : "This route updates a current contact.", 
+        "produces" : ["application/json"],
+        "parameters" :[
+          {
+            "name" : "id",
+            "in" : "path",
+            "required" : true,
+            "type" : "string"
+          },
+          {
+            "name" : "body",
+            "in" : "body",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "firstName":{
+                  "example": "New"
+                },
+                "lastName": {
+                  "example" : "Guy"
+                },
+                "email": {
+                  "example" : "newguy@gmail.com"
+                },
+                "favoriteColor": {
+                  "example" : "green"
+                },
+                "birthday": {
+                  "example" : "02-02-01"
+                }
+              }
+            }
+          }
+        ],
+        "responses" : {
+          "200": {
+            "description" : "Updated contact"
+          },
+          "500":{
+            "description" : "Internal server error"
+          }
+        }
+      },
+
+
+
+      "delete" : {
+        "description" : "This route deletes a contact", 
+        "produces" : ["application/json"],
+        "parameters" :[{
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "string"
+        }],
+        "responses" : {
+          "200": {
+            "description" : "Contact deleted successfully"
+          },
+          "500": {
+            "description" : "Internal server error"
+          }
+        }
+      }
+    }
+  }
+
+
+
+  
+
+}
