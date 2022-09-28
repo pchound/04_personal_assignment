@@ -7,7 +7,7 @@ const doc = {
   },
   host: 'localhost:3000',
   //host: "zero4-personal-assignment.onrender.com",
-  schemes: ['http'],
+  schemes: ['https'],
 };
 
 const outputFile = './swagger.json';

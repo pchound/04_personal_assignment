@@ -9,7 +9,7 @@
   "host": "zero4-personal-assignment.onrender.com",
   "basePath": "/",
   "schemes": [
-    "http"
+    "https"
   ],
   "paths": {
     "/contacts/" : {
