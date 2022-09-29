@@ -5,7 +5,7 @@
     "description": "This is my first swagger API documentation",
     "version": "1.0.0"
   },
-  "host": "zero4-personal-assignment.onrender.com/",
+  "host": "zero4-personal-assignment.onrender.com",
   "basePath": "/",
   "schemes": [
     "https"
