@@ -3,6 +3,7 @@ const { ObjectId } = require('mongodb');
 //const ObjectId = require('mongodb').ObjectId;
 const client = require('../db.js').client;
 //const mongodb = require('mongodb');
+
 async function contacts(request, response) {
     console.log('Responding to request');
     const contacts = await client.db('sample_airbnb').collection('contacts').find({}).toArray();
